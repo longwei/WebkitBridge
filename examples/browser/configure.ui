@@ -1,0 +1,209 @@
+<ui version="4.0" >
+ <class>Configure</class>
+ <widget class="QDialog" name="Configure" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>323</width>
+    <height>331</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Configure</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2" >
+   <item>
+    <widget class="QGroupBox" name="groupBox" >
+     <property name="title" >
+      <string>Fonts</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout" >
+      <item row="0" column="0" >
+       <widget class="QLabel" name="standardFontLabel" >
+        <property name="text" >
+         <string>S&amp;tandard Font</string>
+        </property>
+        <property name="buddy" >
+         <cstring>standardFont</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" >
+       <widget class="QFontComboBox" name="standardFont" >
+        <property name="fontFilters" >
+         <set>QFontComboBox::ProportionalFonts|QFontComboBox::ScalableFonts</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" >
+       <widget class="QLabel" name="fixedFontLabel" >
+        <property name="text" >
+         <string>&amp;Fixed Font</string>
+        </property>
+        <property name="buddy" >
+         <cstring>fixedFont</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" >
+       <widget class="QFontComboBox" name="fixedFont" >
+        <property name="fontFilters" >
+         <set>QFontComboBox::MonospacedFonts|QFontComboBox::ScalableFonts</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QLabel" name="sansSerifFontLabel" >
+        <property name="text" >
+         <string>S&amp;ans Serif Font</string>
+        </property>
+        <property name="buddy" >
+         <cstring>sansSerifFont</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" >
+       <widget class="QFontComboBox" name="sansSerifFont" >
+        <property name="fontFilters" >
+         <set>QFontComboBox::ProportionalFonts|QFontComboBox::ScalableFonts</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" >
+       <widget class="QLabel" name="serifFontLabel" >
+        <property name="text" >
+         <string>&amp;Serif Font</string>
+        </property>
+        <property name="buddy" >
+         <cstring>serifFont</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" >
+       <widget class="QFontComboBox" name="serifFont" >
+        <property name="fontFilters" >
+         <set>QFontComboBox::ProportionalFonts|QFontComboBox::ScalableFonts</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2" >
+     <property name="title" >
+      <string>Misc</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" >
+      <item>
+       <widget class="QCheckBox" name="javascript" >
+        <property name="text" >
+         <string>Enable &amp;JavaScript</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="java" >
+        <property name="text" >
+         <string>Enable &amp;Java</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="plugins" >
+        <property name="text" >
+         <string>Enable &amp;plugins</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="inspector" >
+        <property name="text" >
+         <string>Enable web &amp;inspector</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer" >
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>20</width>
+       <height>48</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox" >
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons" >
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>standardFont</tabstop>
+  <tabstop>fixedFont</tabstop>
+  <tabstop>sansSerifFont</tabstop>
+  <tabstop>serifFont</tabstop>
+  <tabstop>javascript</tabstop>
+  <tabstop>java</tabstop>
+  <tabstop>plugins</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Configure</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>161</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>161</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Configure</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>161</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>161</x>
+     <y>150</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Phonon Plugin</title>
+  </head>
+  <body>
+    <h1>Phonon Plugin</h1>
+
+    <object type="video/x-theora"
+            data="sample.m4v"
+            height=320 width=340>
+    </object>
+  </body>
+</html>
